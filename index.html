@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
@@ -13,21 +13,39 @@
 
 
     <div id="container" class="container">
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>*</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>-</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>+</div>
-        <div>0</div>
-        <div>.</div>
-        <div>=</div>
+    <table>
+        <tr>
+            <td colspan="4" class="calc">0</td>
+        </tr>
+        <tr>
+            <td class="calc">AC</td>
+            <td class="calc">+/-</td>
+            <td class="calc">%</td>
+            <td class="calc">/</td>
+        </tr>
+        <tr>
+            <td class="calc">7</td>
+            <td class="calc">8</td>
+            <td class="calc">9</td>
+            <td class="calc">*</td>
+        </tr>
+        <tr>
+            <td class="calc">4</td>
+            <td class="calc">5</td>
+            <td class="calc">6</td>
+            <td class="calc">-</td>
+        </tr>
+        <tr>
+            <td class="calc">1</td>
+            <td class="calc">2</td>
+            <td class="calc">3</td>
+            <td class="calc">+</td>
+        </tr>
+            <td colspan="2" class="calc">0</td>
+            <td class="calc">.</td>
+            <td class="calc">=</td>
+            
+    </table>
     </div>
 </body>
 </html>

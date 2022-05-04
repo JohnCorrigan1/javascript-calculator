@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+#container {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.calc {
+    text-align: center;
+    min-width: 50px;
+    max-width: 50px;
+    padding: 20px;
+    border: solid 1px black;
+}
+
+#zero {
+    width: 100px;
+    padding: 20px;
+    border: solid 1px black;
+}

@@ -14,8 +14,23 @@ function divide(a, b) {
     return a / b;
 }
 
+function getOperator(a, b, c) {
+    if(b == "+") {
+        return a + c;
+    }
+    else if(b == "-") {
+        return a - c;
+    }
+    else if(b == "*") {
+        return a * c;
+    }
+    else if (b == "/") {
+        return a / c;
+    }
+}
 
-add(1, 3);
-subtract(10, 2);
-multiply(3, 5);
-divide(10, 2);
+
+let operands = document.querySelectorAll('td');
+operands.addEventListener('click', function(event){
+    event.target.style.backroundColor = "yellow";
+});
