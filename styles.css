@@ -1,23 +1,34 @@
-h1 {
-    text-align: center;
-}
-
-#container {
-    margin-top: 10%;
+body {
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, blue, red);
 }
 
-.calc {
-    text-align: center;
-    min-width: 50px;
-    max-width: 50px;
-    padding: 20px;
+button:hover {
+cursor: pointer;
+background-color: lightblue;
+}
+
+button {
     border: solid 1px black;
 }
 
-#zero {
-    width: 100px;
-    padding: 20px;
-    border: solid 1px black;
+.container {
+   border: solid 2px black;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    height: 350px;
+    width: 350px;
 }
+
+.double {
+    grid-column:  1 / span 2;
+}
+
+.display {
+    grid-column: 1 / span 4;
+}
+

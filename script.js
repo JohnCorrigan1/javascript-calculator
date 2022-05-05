@@ -30,7 +30,4 @@ function getOperator(a, b, c) {
 }
 
 
-let operands = document.querySelectorAll('td');
-operands.addEventListener('click', function(event){
-    event.target.style.backroundColor = "yellow";
-});
+
