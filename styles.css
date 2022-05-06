@@ -12,8 +12,15 @@ cursor: pointer;
 background-color: lightblue;
 }
 
+#clear {
+    background-color: lightcoral;
+}
+
+
+
 button {
     border: solid 1px black;
+    background-color: lightseagreen;
 }
 
 .container {
@@ -29,6 +36,18 @@ button {
 }
 
 .display {
+    display: flex;
+    grid-column: 1 / span 4;
+    justify-content: center;
+    align-self: center;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-self: center;
     grid-column: 1 / span 4;
 }
+
+
 
