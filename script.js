@@ -1,39 +1,3 @@
-/*
-const display = document.querySelector("#display");
-const nums = document.querySelectorAll(".calc");
-const result = document.querySelector("#result");
-let operator ="";
-let num1 = "";
-let num2 ="";
-
-function add(a, b) {
-    return a + b;
-};
-
-function subtract(a, b) {
-    return a - b;
-};
-
-function multiply(a, b) {
-    return a * b;
-};
-
-function divide(a, b) {
-    return a / b;
-}
-
-function operate(operator, num1, num2){
-    switch(operator){
-        case '+':
-            return add(num1, num2);
-            break;
-        case '-':
-            return subtract(num1, num2);
-            break;
-    }
-}
-*/
-
 function add(a, b) {
     return a + b;
 };
@@ -117,7 +81,7 @@ function calculate(){
         if(buttonText === "="){
             operate(num1, num2);
             result.textContent = num1 + operwator + num2 + " = " + answer;
-            display.textContent = "";
+            display.textContent = answer;
             return;
         }
 
@@ -130,7 +94,8 @@ function calculate(){
             return num1;
         }
 
-        if (result.textContent.includes("+") || result.textContent.includes("*") || result.textContent.includes("/") || result.textContent.includes("-") ){
+        if (result.textContent.includes("+") || result.textContent.includes("*") ||
+         result.textContent.includes("/") || result.textContent.includes("-") ){
             display.textContent += buttonText;
             num2 = display.textContent;
             console.log(num2);
@@ -142,6 +107,10 @@ function calculate(){
             return;
         }
 
+        if(result.textContent.includes(answer)){
+            num1 = answer;
+            return;
+        }
 
         else {
             display.textContent += buttonText;

@@ -29,6 +29,15 @@ button {
     grid-template-columns: repeat(4, 2fr);
     height: 350px;
     width: 350px;
+    background-color: lightslategrey;
+}
+
+.delete{
+    background-color: lightcoral;
+}
+
+.operator{
+    background-color: cornflowerblue;
 }
 
 .double {
@@ -36,6 +45,7 @@ button {
 }
 
 .display {
+    color: white;
     display: flex;
     grid-column: 1 / span 4;
     justify-content: center;
@@ -43,11 +53,15 @@ button {
 }
 
 .result {
+    color: white;
     display: flex;
     justify-content: center;
     align-self: center;
     grid-column: 1 / span 4;
 }
 
+#equals {
+    background-color: lightyellow;
+}
 
 
