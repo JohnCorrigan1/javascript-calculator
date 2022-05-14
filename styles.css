@@ -8,13 +8,15 @@ body {
 }
 
 button:hover {
-cursor: pointer;
+    cursor: pointer;
 background-color: lightblue;
 }
 
-#clear {
-    background-color: lightcoral;
+#clear:hover {
+    cursor: pointer;
+    background-color: lightblue;
 }
+
 
 
 
@@ -24,7 +26,7 @@ button {
 }
 
 .container {
-   border: solid 2px black;
+    border: solid 2px black;
     display: grid;
     grid-template-columns: repeat(4, 2fr);
     height: 350px;
@@ -36,6 +38,9 @@ button {
     background-color: lightcoral;
 }
 
+#clear {
+    background-color: lightcoral;
+}
 .operator{
     background-color: cornflowerblue;
 }

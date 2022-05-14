@@ -32,6 +32,7 @@ function getOperator(a, b, c) {
 const display = document.querySelector("#display");
 const keys = document.querySelectorAll("button");
 const result = document.querySelector("#result");
+const operator = document.querySelectorAll(".operator");
 let num1 = "";
 let num2 = "";
 let answer = 0;
@@ -77,6 +78,18 @@ function calculate(){
             result.textContent = "0";
             return;
         }
+        if(buttonText === "." && display.textContent.includes(".")){
+            return;
+        }
+
+        if (buttonText === "Del"){
+            let deleteOne = display.textContent;
+            deleteOne = deleteOne.split("");
+            deleteOne.pop();
+            deleteOne = deleteOne.join("");
+            display.textContent = deleteOne;
+            return;
+        }
         
         if(buttonText === "="){
             operate(num1, num2);
@@ -84,6 +97,16 @@ function calculate(){
             display.textContent = answer;
             return;
         }
+        
+        if((num2 != "" && buttonText ==="+") || (num2 != "" && buttonText ==="-") || 
+        (num2 != "" && buttonText ==="/") || (num2 != "" && buttonText ==="*")){
+            
+            operate(num1, num2)
+            num1 = answer;
+            display.textContent = answer;
+            console.log("test")
+        }
+        
 
         if(buttonText === "+" || buttonText === "-" || buttonText === "*" || buttonText === "/"){
             num1 = display.textContent;
@@ -93,7 +116,8 @@ function calculate(){
             console.log(num1)
             return num1;
         }
-
+        
+        
         if (result.textContent.includes("+") || result.textContent.includes("*") ||
          result.textContent.includes("/") || result.textContent.includes("-") ){
             display.textContent += buttonText;
@@ -111,6 +135,7 @@ function calculate(){
             num1 = answer;
             return;
         }
+
 
         else {
             display.textContent += buttonText;
