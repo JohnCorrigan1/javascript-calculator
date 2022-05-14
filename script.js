@@ -104,7 +104,7 @@ function calculate(){
             operate(num1, num2)
             num1 = answer;
             display.textContent = answer;
-            console.log("test")
+            return;
         }
         
 
@@ -113,7 +113,6 @@ function calculate(){
             operwator = this.textContent
             result.textContent = num1 + "  " + buttonText;
             display.textContent = "";
-            console.log(num1)
             return num1;
         }
         
@@ -122,7 +121,6 @@ function calculate(){
          result.textContent.includes("/") || result.textContent.includes("-") ){
             display.textContent += buttonText;
             num2 = display.textContent;
-            console.log(num2);
             return;
         }
 
