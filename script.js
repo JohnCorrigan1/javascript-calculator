@@ -75,7 +75,7 @@ function calculate(){
             num1 = "";
             num2 = "";
             display.textContent = "";
-            result.textContent = "0";
+            result.textContent = "";
             return;
         }
         if(buttonText === "." && display.textContent.includes(".")){
