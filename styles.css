@@ -69,4 +69,20 @@ button {
     background-color: lightyellow;
 }
 
+footer {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    margin-right: 5px;
+}
+
+.github-logo:hover{
+    transform: scale(1.25);
+}
 
