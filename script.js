@@ -37,6 +37,7 @@ let num1 = "";
 let num2 = "";
 let answer = 0;
 let operwator = "";
+let deleteOne = 0;
 
 
 function operate(a, b){
@@ -82,14 +83,19 @@ function calculate(){
             return;
         }
 
+
         if (buttonText === "Del"){
-            let deleteOne = display.textContent;
+            deleteOne = display.textContent;
             deleteOne = deleteOne.split("");
             deleteOne.pop();
             deleteOne = deleteOne.join("");
             display.textContent = deleteOne;
+                if(num2 != ""){
+                    num2 = deleteOne;
+                }
             return;
         }
+        
         
         if(buttonText === "="){
             operate(num1, num2);
@@ -101,9 +107,11 @@ function calculate(){
         if((num2 != "" && buttonText ==="+") || (num2 != "" && buttonText ==="-") || 
         (num2 != "" && buttonText ==="/") || (num2 != "" && buttonText ==="*")){
             
-            operate(num1, num2)
+            operate(num1, num2);
             num1 = answer;
-            display.textContent = answer;
+            display.textContent = "";
+            result.textContent = answer + " " + buttonText;
+            operwator = buttonText;
             return;
         }
         
@@ -118,7 +126,8 @@ function calculate(){
         
         
         if (result.textContent.includes("+") || result.textContent.includes("*") ||
-         result.textContent.includes("/") || result.textContent.includes("-") ){
+            result.textContent.includes("/") || result.textContent.includes("-") ){
+                
             display.textContent += buttonText;
             num2 = display.textContent;
             return;
