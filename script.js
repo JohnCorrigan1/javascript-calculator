@@ -72,6 +72,9 @@ function calculate(){
     let buttonText = this.innerText;
     console.log(buttonText);
 
+       
+
+
         if(buttonText === "Clear"){
             num1 = "";
             num2 = "";
@@ -98,15 +101,28 @@ function calculate(){
         
         
         if(buttonText === "="){
+            if(result.textContent.includes("/") && num2 === "0"){
+                console.log("test")
+                result.textContent = "";
+                display.textContent = "Hey you know I can't do that!";
+                return;
+            }
             operate(num1, num2);
             result.textContent = num1 + operwator + num2 + " = " + answer;
             display.textContent = answer;
             return;
         }
+
+        
         
         if((num2 != "" && buttonText ==="+") || (num2 != "" && buttonText ==="-") || 
         (num2 != "" && buttonText ==="/") || (num2 != "" && buttonText ==="*")){
-            
+            if(result.textContent.includes("/") && num2 === "0"){
+                console.log("test")
+                result.textContent = "";
+                display.textContent = "Hey you know I can't do that!";
+                return;
+            }
             operate(num1, num2);
             num1 = answer;
             display.textContent = "";
@@ -127,11 +143,13 @@ function calculate(){
         
         if (result.textContent.includes("+") || result.textContent.includes("*") ||
             result.textContent.includes("/") || result.textContent.includes("-") ){
-                
+
             display.textContent += buttonText;
             num2 = display.textContent;
             return;
         }
+
+       
 
         if(result.textContent.includes("=")){
             num1 = answer;
